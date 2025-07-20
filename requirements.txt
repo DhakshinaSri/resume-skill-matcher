@@ -1,8 +1,10 @@
 fastapi
-uvicorn
+uvicorn[standard]
 python-multipart
+spacy
+PyPDF2
+scikit-learn
 pdfplumber
 python-docx
-scikit-learn
-python-multipart
-jinja2
+aiofiles
+sentence-transformers
