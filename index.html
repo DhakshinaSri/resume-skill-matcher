@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Matcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Resume Matcher</h2>
+    <form id="resumeForm">
+      <label id="skillsLabel">Required skills</label>
+      <div id="skillsInput" class="tags-input-container" role="group" aria-labelledby="skillsLabel">
+        <input type="text" id="skillEntry" placeholder="Type a skill and press Enter..." />
+      </div>
+      <input type="hidden" id="skills" name="skills" />
+
+      <label for="resumeFile">Upload Resume</label>
+      <div class="file-upload">
+        <div class="custom-upload">
+          <input type="file" id="resumeFile" accept=".pdf,.docx" required hidden>
+          <label for="resumeFile" class="upload-btn">Choose file</label>
+          <span id="fileName">No file chosen</span>
+        </div>
+        <button type="submit" class="custom-button">Analyse</button>
+      </div>
+    </form>
+
+    <hr>
+
+    <div class="result" id="resultContainer">
+      <h2></h2>
+      <div class="result">
+        <div class="circular-score">
+          <canvas id="scoreChart" width="150" height="150"></canvas>
+          <p id="matchScoreText"></p>
+        </div>
+        <div class="report" id="reportSection" style="display: none;">
+          <p><strong>Matched Skills:</strong> <span id="matchedSkills"></span></p>
+          <p><strong>Missing Skills:</strong> <span id="missingSkills"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
