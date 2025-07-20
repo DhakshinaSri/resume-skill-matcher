@@ -51,7 +51,7 @@ document.getElementById("resumeForm").addEventListener("submit", async function 
   formData.append("required_skills", skills);
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/match_resume/", {
+    const response = await fetch("https://resume-matcher.onrender.com/match_resume/", {
       method: "POST",
       body: formData,
     });
